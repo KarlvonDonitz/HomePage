@@ -55,25 +55,27 @@ hr.line { margin: 15px auto; padding: 0; max-width: 90px;border: 0; border-top: 
 .top-header ul.top-social a{color: #fff;}
 .top-header ul.top-social a:hover{color: #23B6B6;}
 
+
+
 @media only screen and (max-width: 767px){
 	.top-header ul.top-social{float:none !important; text-align: center;}
 }
 
 header{}
 
-.site-header {position: relative;margin-bottom: 45px;z-index:2;background: url(../res/Warframe.png) no-repeat;background-position: 0 0;background-attachment: fixed;background-size: cover;}
-.site-branding {padding-top: 120px;text-align: center;}
-.site-logo{opacity: 0.8;height: 100%;width: 50%;}
-.overlay {position: absolute;height: 100%;width: 100%;top: 0;background-color: #000;opacity: 0.4;z-index: -1;}
-/* ---------------------------------------------------------------------------- */
-/* -------------------------------------Content-------------------------------- */
-/* ---------------------------------------------------------------------------- */
-#page-content{}
-#page-content.index-page {}
-#page-content.sub-page {padding: 30px 0;}
+  .site-header {position: relative;margin-bottom: 45px;z-index:0;background: url(../res/Warframe.png) no-repeat;background-position: 0 0;background-attachment: fixed;background-size: cover;}
+  .site-branding {padding-top: 120px;text-align: center;}
+  .site-logo{opacity: 0.8;height: 100%;width: 50%;}
+  .overlay {position: absolute;height: 100%;width: 100%;top: 0;background-color: #000;opacity: 0.4;z-index: 1;}
+  /* ---------------------------------------------------------------------------- */
+  /* -------------------------------------Content-------------------------------- */
+  /* ---------------------------------------------------------------------------- */
+  #page-content{}
+  #page-content.index-page {}
+  #page-content.sub-page {padding: 30px 0;}
 
 /* ---HomePage--- */
-.box-content {padding: 50px 0;}
+.box-content {padding: 50px 0;z-index:2}
 
 .box-content.box-5 {}
 .box-content.box-5 .box-item{background-color: #1f1f1f;margin: 0 auto 30px;max-width: 500px;}
@@ -88,7 +90,7 @@ header{}
 .entry-title a{color:#111;}
 .entry-title a:hover{color:#23B6B6;}
 
-.entry-thumb {position: relative;z-index: 2;text-align: center;}
+.entry-thumb {position: relative;z-index: 0;text-align: center;}
 .entry-thumb:after {position: absolute;content: '';height: 0;width: 100%;left: 0;bottom: 0;background-color: rgba(10, 10, 10, 0.4);transition: height 0.4s;-webkit-transition: height 0.4s;}
 .entry-thumb:hover:after {height: 100%;}
 .single-thumb{text-align: center !important; margin-bottom: 30px;}
@@ -96,7 +98,7 @@ header{}
 .entry-thumb:hover .thumb-link {opacity:1;}
 .read-more {background-color: #406EFF;padding: 15px 30px 30px;-webkit-transition: background-color 0.5s;transition: background-color 0.3s;}
 .read-more:hover {background-color: #FF00FF;}
-.read-more a {color: #fff;position: relative;z-index: 99;}
+.read-more a {color: #fff;position: relative;z-index: 0;}
 
 
 .post {padding: 50px;background: #1f1f1f;}
@@ -137,7 +139,7 @@ footer .copyright {padding: 25px 0;}
 /* -----------------------------------SVG Effect------------------------------- */
 /* ---------------------------------------------------------------------------- */
 svg {position: absolute;top: 0;left: 0;}
-.svg-container {width: 100%;height: 0;padding-top: 7.93650794%;position: absolute;bottom: 0;position: relative;z-index: 3;}
+.svg-container {width: 100%;height: 0;padding-top: 7.93650794%;position: absolute;bottom: 0;position: relative;z-index: 1;}
 .nav-svg {position: relative;z-index: 3;margin-bottom: -7.81%;}
 .header-svg {margin-bottom: -2px;}
 .svg-block {fill: #1c1c1c;stroke: none;}

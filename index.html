@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Responsive Html5 Templates">
     <meta name="author" content="">
-
+    <link rel="stylesheet" type="text/css" href="live2d/assets/waifu.min.css?v=1.4.2"/>
 	<!-- styles -->
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -24,6 +24,7 @@
 </head>
 
 <body id="wrapper">
+
 
 	<!-- /////////////////////////////////////////Navigation -->
   <button id="mm-menu-toggle" class="mm-menu-toggle">Toggle Menu</button>
@@ -232,7 +233,7 @@
 								<a class="btn btn-1" href="https://github.com/KarlvonDonitz/MMD-PixelStyle.html">Get FX</a>
 							</div>
 							<div class="read-more">
-								<a href="content/8bit Visual Effects Download.html">Continue reading …</a>
+								<a href="single.html">Continue reading …</a>
 							</div>
 							<div class="svg-container post-bottom-svg svg-block">
 								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
@@ -291,12 +292,12 @@
 								</svg>
 							</div>
 							<div class="entry-thumb">
-								<img class="img-responsive" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/fccc034e-6c8b-4179-ae4c-95962fd05d90/dctr1yt-4a673141-3ce3-49ef-96c1-31e2c10d4480.png/v1/fill/w_444,h_250,q_70,strp/_mmd_model_dl__halloween_ikaros_by_karlvondonitz_dctr1yt-250t.jpg" >
+								<img class="img-responsive" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/fccc034e-6c8b-4179-ae4c-95962fd05d90/dctr1yt-4a673141-3ce3-49ef-96c1-31e2c10d4480.png/v1/fill/w_444,h_250,q_70,strp/_mmd_model_dl__halloween_ikaros_by_karlvondonitz_dctr1yt-250t.jpg">
 								<a class="thumb-link" href="https://www.bilibili.com/video/av35555184"><i class="fa fa-link"></i></a>
 							</div>
 							<div class="content">
 								<h3 class="entry-title">
-									<a href="https://www.deviantart.com/karlvondonitz/gallery/67791973/heaven-s-lost-property.html">Heaven's Lost Property Model Download</a>
+									<a href="single.html">Heaven's Lost Property Model Download</a>
 								</h3>
 								<p>This is the MMD model of the Heaven's Lost Property series, including Christmas, Rockstar and other types.</p>
 								<span>December 6, 2018 In DeviantArt Station</span><br>
@@ -376,5 +377,66 @@
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
+  <!-- waifu-tips.js 依赖 JQuery 库 -->
+  <script src="live/assets/jquery.min.js?v=3.3.1"></script>
+
+  <!-- 实现拖动效果，需引入 JQuery UI -->
+  <script src="live/assets/jquery-ui.min.js?v=1.12.1"></script>
+
+
+<!--      く__,.ヘヽ.　　　　/　,ー､ 〉
+      　　　　　＼ ', !-─‐-i　/　/´
+      　　　 　 ／｀ｰ'　　　 L/／｀ヽ､
+      　　 　 /　 ／,　 /|　 ,　 ,　　　 ',
+      　　　ｲ 　/ /-‐/　ｉ　L_ ﾊ ヽ!　 i
+      　　　 ﾚ ﾍ 7ｲ｀ﾄ　 ﾚ'ｧ-ﾄ､!ハ|　 |
+      　　　　 !,/7 '0'　　 ´0iソ| 　 |　　　       Be cute and cool
+      　　　　 |.从"　　_　　 ,,,, / |./ 　 |
+      　　　　 ﾚ'| i＞.､,,__　_,.イ / 　.i 　|
+      　　　　　 ﾚ'| | / k_７_/ﾚ'ヽ,　ﾊ.　|
+      　　　　　　 | |/i 〈|/　 i　,.ﾍ |　i　|
+      　　　　　　.|/ /　ｉ： 　 ﾍ!　　＼　|
+      　　　 　 　 kヽ>､ﾊ 　 _,.ﾍ､ 　 /､!
+      　　　　　　 !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+      　　　　　　 ﾚ'ヽL__|___i,___,ンﾚ|ノ
+      　　　　　 　　　ﾄ-,/　|___./
+      　　　　　 　　　'ｰ'　　!_,./
+-->
+  <div class="waifu" >
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" class="live2d"></canvas>
+      <div class="waifu-tool">
+          <span class="fui-home"></span>
+          <span class="fui-chat"></span>
+          <span class="fui-eye"></span>
+          <span class="fui-user"></span>
+          <span class="fui-photo"></span>
+          <span class="fui-info-circle"></span>
+          <span class="fui-cross"></span>
+      </div>
+  </div>
+  <script src="live2d/assets/waifu-tips.min.js?v=1.4.2"></script>
+  <script src="live2d/assets/live2d.min.js?v=1.0.5"></script>
+  <script type="text/javascript">
+      /* 可直接修改部分参数 */
+      live2d_settings['modelId'] = 1;                  // 默认模型 ID
+      live2d_settings['modelTexturesId'] = 87;         // 默认材质 ID
+      live2d_settings['modelStorage'] = false;         // 不储存模型 ID
+      live2d_settings['canCloseLive2d'] = false;       // 隐藏 关闭看板娘 按钮
+      live2d_settings['canTurnToHomePage'] = false;    // 隐藏 返回首页 按钮
+      live2d_settings['showToolMenu']  = false;        //隐藏工具栏
+      live2d_settings['waifuSize'] = '600x535';        // 看板娘大小
+      live2d_settings['waifuTipsSize'] = '200x100';    // 提示框大小
+      live2d_settings['waifuFontSize'] = '30px';       // 提示框字体
+      live2d_settings['waifuToolFont'] = '36px';       // 工具栏字体
+      live2d_settings['waifuToolLine'] = '50px';       // 工具栏行高
+      live2d_settings['waifuToolTop'] = '-60px';       // 工具栏顶部边距
+      live2d_settings['waifuDraggable'] = 'axis-x';    // 拖拽样式
+      live2d_settings['waifuMinWidth']        = '768px';      // 面页小于 指定宽度 隐藏看板娘，例如 'disable'(禁用), '768px'
+      live2d_settings['waifuEdgeSide']        = 'left:50';     // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
+
+      /* 在 initModel 前添加 */
+      initModel("live2d/assets/waifu-tips.json?v=1.4.2")
+  </script>
 </body>
 </html>
