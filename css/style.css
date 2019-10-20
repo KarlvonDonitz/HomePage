@@ -64,7 +64,7 @@ hr.line { margin: 15px auto; padding: 0; max-width: 90px;border: 0; border-top: 
 header{}
 
   .site-header {position: relative;margin-bottom: 45px;z-index:0;background: url(../res/Warframe.png) no-repeat;background-position: 0 0;background-attachment: fixed;background-size: cover;}
-  .site-branding {padding-top: 120px;text-align: center;}
+  .site-branding {padding-top: 120px;text-align: center;filter:brightness(3);}
   .site-logo{opacity: 1;height: 100%;width: 80%;}
   .overlay {position: absolute;height: 100%;width: 100%;top: 0;background-color: #000;opacity: 0.4;z-index: 1;}
   /* ---------------------------------------------------------------------------- */
