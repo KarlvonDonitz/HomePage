@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>Map</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <style type="text/css">
+       html,body,#container{
+           height:100%;
+       }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<div class="info">
+    <p id='info'></p>
+</div>
+<div class="input-card" style="width: auto;">
+    <div class="input-item">
+        <button class="btn" onclick="toggle()">显示/隐藏实时路况</button>
+        <button class="btn" onclick="Satellitetoggle()">显示/隐藏卫星图</button>
+    </div>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=50c7a79cc11d3017b18feb4b34225b24&plugin=AMap.CitySearch"></script>
+<script type="text/javascript">
+   var map = new AMap.Map('container', {
+       center: [117.000923, 36.675807],
+       zoom: 6
+   });
+   map.plugin(["AMap.ToolBar"], function() {
+       map.addControl(new AMap.ToolBar());
+   });
+    //获取用户所在城市信息
+    function showCityInfo() {
+        //实例化城市查询类
+        var citysearch = new AMap.CitySearch();
+        //自动获取用户IP，返回当前城市
+        citysearch.getLocalCity(function(status, result) {
+            if (status === 'complete' && result.info === 'OK') {
+                if (result && result.city && result.bounds) {
+                    var cityinfo = result.city;
+                    var citybounds = result.bounds;
+                    document.getElementById('info').innerHTML = '您当前所在城市：'+cityinfo;
+                    //地图显示当前城市
+                    map.setBounds(citybounds);
+                }
+            } else {
+                document.getElementById('info').innerHTML = result.info;
+            }
+        });
+    }
+    showCityInfo();
+
+    var trafficLayer = new AMap.TileLayer.Traffic({
+        zIndex: 10
+    });
+
+    var SatelliteLayer = new AMap.TileLayer.Satellite({
+        zIndex: 8
+    });
+
+    trafficLayer.setMap(map);
+    var TrafficisVisible = true;
+    function toggle() {
+        if (TrafficisVisible) {
+            trafficLayer.hide();
+            TrafficisVisible = false;
+        } else {
+            trafficLayer.show();
+           TrafficisVisible = true;
+        }
+    }
+
+      SatelliteLayer.setMap(map);
+    var SatelliteisVisible = true;
+    function Satellitetoggle() {
+        if (SatelliteisVisible) {
+            SatelliteLayer.hide();
+            SatelliteisVisible = false;
+        } else {
+            SatelliteLayer.show();
+           SatelliteisVisible = true;
+        }
+    }
+
+    //创建右键菜单
+    var MapcontextMenu = new AMap.ContextMenu();
+
+    //右键放大
+    MapcontextMenu.addItem("放大一级", function () {
+        map.zoomIn();
+    }, 0);
+
+    //右键缩小
+    MapcontextMenu.addItem("缩小一级", function () {
+        map.zoomOut();
+    }, 1);
+
+    //右键显示全国范围
+    MapcontextMenu.addItem("缩放至全国范围", function (e) {
+        map.setZoomAndCenter(4, [108.946609, 34.262324]);
+    }, 2);
+    MapcontextMenu.addItem("缩放至我的城市", function (e) {
+        showCityInfo();
+    }, 3);
+        var markers = [];
+    //右键添加Marker标记
+    MapcontextMenu.addItem("添加标记", function (e) {
+        var marker = new AMap.Marker({
+            map: map,
+            position: contextMenuPositon, //基点位置
+            draggable: true,
+            cursor: 'move',
+           // 设置拖拽效果
+           raiseOnDrag: true
+        }
+      );
+      markers.push(marker);
+    }, 4);
+
+  MapcontextMenu.addItem("删除全部标记",function(){
+    map.remove(markers);
+  }, 5);
+    //地图绑定鼠标右击事件——弹出右键菜单
+    map.on('rightclick', function (e) {
+        MapcontextMenu.open(map, e.lnglat);
+        contextMenuPositon = e.lnglat;
+    });
+</script>
+</body>
+</html>
