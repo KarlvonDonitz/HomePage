@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  	<title>TICTOC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+
+	<!-- styles -->
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/menu.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="wrapper">
+
+	<!-- /////////////////////////////////////////Navigation -->
+	<button id="mm-menu-toggle" class="mm-menu-toggle">Toggle Menu</button>
+	<nav id="mm-menu" class="mm-menu">
+		<div class="mm-menu__header">
+			<h2 class="mm-menu__title">KarlvonDonitz</h2>
+		</div>
+		<ul class="mm-menu__items">
+			<li class="mm-menu__item">
+			  <a class="mm-menu__link" href="../index.html">
+				<span class="mm-menu__link-text"><i class="fa fa-home"></i> Home</span>
+			  </a>
+			</li>
+			<li class="mm-menu__item">
+			  <a class="mm-menu__link" href="https://www.deviantart.com/karlvondonitz">
+				<span class="mm-menu__link-text"><i class="fa fa-user"></i> DeviantArt Station</span>
+			  </a>
+			</li>
+			<li class="mm-menu__item">
+			  <a class="mm-menu__link" href="https://github.com/KarlvonDonitz">
+				<span class="mm-menu__link-text"><i class="fa fa-github"></i> Github</span>
+			  </a>
+			</li>
+			<li class="mm-menu__item">
+			  <a class="mm-menu__link" href="https://space.bilibili.com/27611393">
+				<span class="mm-menu__link-text"><i class="fa fa-laptop"></i> BiliBili</span>
+			  </a>
+			</li>
+		</ul>
+	</nav><!-- /nav -->
+
+	<!-- /////////////////////////////////////////Header -->
+<div class="top-header">
+		<div class="container">
+			<ul class="list-inline top-social">
+				<li><a href="https://facebook.com/KarlvonDonitz"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/KarlvonDonitz"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://github.com/KarlvonDonitz"><i class="fa fa-github"></i></a></li>
+				<li><a href="https://space.bilibili.com/27611393"><i class="fa fa-laptop"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="svg-container nav-svg svg-block">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1950 150">
+		  <g transform="translate(0,-902.36218)"></g>
+		  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+		  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+		  <path d="M 0,150 0,0 1925,0"></path>
+		</svg>
+	</div>
+	<header id="masthead" class="site-header" role="banner" style="background-position: 50% -120px;">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="site-branding">
+				<a href="index.html" title="Logo"><img class="site-logo" src="../res/logo.png" alt="Logo"></a>
+			</div><!-- .site-branding -->
+		</div>
+		<div class="svg-container header-svg svg-block">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+				<g transform="translate(0,-902.36218)"></g>
+				  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				  <path d="m 1925,0 0,150 -1925,0"></path>
+			</svg>
+		</div>
+	</header><!-- #masthead -->
+	<!-- Header -->
+
+
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content" class="sub-page">
+
+		<!-- //////////// -->
+		<article class="box-content container">
+			<div class="svg-container single-post-svg svg-block">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+					<g transform="translate(0,-902.36218)"></g>
+					  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+					  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+					  <path d="m 1925,0 0,150 -1925,0"></path>
+				</svg>
+			</div>
+			<div class="post" style="">
+				<h1 class="entry-title">TicTakToc</h1>
+        <div class="choose">
+            <input type="button" id="x_first" class="choose_button" value="Player First">
+            </br>
+            <input type="button" id="o_first" class="choose_button" value="Computer First">
+        </div>
+        <div class="panel">
+            <table>
+                <tr>
+                    <td first='true' id="1"></td>
+                    <td first='true' id="2"></td>
+                    <td first='true' id="3"></td>
+                </tr>
+                <tr>
+                    <td first='true' id="4"></td>
+                    <td first='true' id="5"></td>
+                    <td first='true' id="6"></td>
+                </tr>
+                <tr>
+                    <td first='true' id="7"></td>
+                    <td first='true' id="8"></td>
+                    <td first='true' id="9"></td>
+                </tr>
+            </table>
+        </div>
+        <div style="margin-top: 25px; text-align: center;">
+            <input type="button" id="restart" class="choose_button" value="Restart Game">
+        </div>
+        <div class="winner">
+            <p id="winner"></p>
+        </div>
+			</div>
+      <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+      <script src="../js/TICTOC.js"></script>
+			<div class="svg-container single-post-svg single-svg-bottom svg-block">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1920 150">
+				  <g transform="translate(0,-902.36218)"></g>
+				  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+				  <path d="M 0,150 0,0 1925,0"></path>
+				</svg>
+			</div>
+		</article>
+
+	</div>
+
+	<div class="svg-container footer-svg svg-block">
+
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1890 150">
+			<g transform="translate(0,-902.36218)"></g>
+			  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+			  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"></path>
+			  <path d="m 1925,0 0,150 -1925,0"></path>
+		</svg>
+		</div>
+	<!-- /////////////////////////////////////////Footer -->
+  <footer>
+    <div class="wrap-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; KarlvonDonitz <br/>  </span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li><a href="https://space.bilibili.com/27611393"><i class="fa fa-laptop"></i></a>
+              </li>
+              <li><a href="https://www.deviantart.com/karlvondonitz"><i class="fa fa-home"></i></a>
+              </li>
+              <li><a href="https://github.com/KarlvonDonitz"><i class="fa fa-github"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li><a href="#">Privacy Policy</a>
+              </li>
+              <li><a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+	<!-- Footer -->
+
+	<!-- Top Slider -->
+    <script src="js/jquery.js"></script>
+
+	<!-- Menu Js -->
+	<script src="js/materialMenu.js"></script>
+	<script>
+	  var menu = new Menu;
+	</script>
+    <script src="../js/TICTOC.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

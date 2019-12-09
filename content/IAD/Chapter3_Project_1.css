@@ -1,0 +1,53 @@
+header, footer {
+    color: white;
+    background-color: #3D6271;
+    margin: 0em 8em 1em 8em;
+}
+
+body{
+    background-color: #203644;
+}
+
+body article {
+    margin: 0em 8em 1em 8em;
+    background-color: white;
+}
+
+article p i{
+    color: grey;
+}
+
+article #sphoto{
+    border:solid;
+    padding: 1em;
+    color: grey;
+}
+
+body #p1{
+    color: white;
+    background-color: #728C98;
+    font-size: 22px;
+}
+body h1{
+    font-size: 50px;
+}
+
+#p2 span{
+    color: grey;
+    font-size: 15px;
+    font-style: italic;
+}
+
+article h2{
+    font-size:25px;
+}
+
+footer div{
+    font-size: 18px;
+}
+
+#share{
+    border:solid 1px black;
+    margin-right: 50%;
+    background-color: rgba(247, 241, 236, 0.87);
+}
